@@ -25,8 +25,13 @@ jobs:
       - name: App Build
         working-directory: .
         run: npx ng build --configuration=production
-
+        
+      - name: Remove old deploy worktree
+        run: git worktree prune
+        
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/to-do-list  
+          clean: true
+          force: true
