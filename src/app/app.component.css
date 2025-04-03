@@ -1,0 +1,44 @@
+.body_container{
+    position:absolute;
+    left:0;
+    top:0;
+    background-color: var(--background);
+    min-height: 100vh;
+    height: max-content;
+    width:100vw;
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    overflow-x: hidden;
+}
+
+h1{
+    margin-top:8vh;
+    margin-bottom: 5vh;
+    font-family: var(--header-font);
+    font-size: 2.5rem;
+    color:var(--dark-text);
+}
+
+img {
+    position:absolute;
+    width:19vh;
+    height:auto;
+}
+#cat_in_headphones{
+    left:10%;
+    top: 25%;
+}
+#apple{
+    right:15%;
+    top: 10%;
+}
+#cat_dancing{
+    right:1%;
+    top:55%;
+}
+@media (max-width: 600px) {
+    img {
+        display: none;
+    }
+}

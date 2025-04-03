@@ -1,0 +1,191 @@
+
+.list_body{
+    margin-top:5%;
+    margin-inline:auto;
+    background-color: var(--list-background);
+    width:30vw;
+    min-height: 40vh;
+    border-radius:2vh;
+    padding: 3% 1%;
+    position:relative;
+    overflow-x: hidden;
+}
+
+.list_body h3{
+    padding-bottom: 1.5%;
+    margin:0;
+    margin-left:41%;
+    font-family: var(--header-font);
+    font-size: 1.8rem;
+    color: var(--input-background);
+}
+
+.title_delete{
+    width:100%;
+    display:flex;
+    align-items: center;
+}
+
+.fallback{
+    font-family:var(--text-font);
+    font-size: 1.2rem;
+    font-weight: 650;
+    color: #C2C78E;
+    text-align: center;
+}
+
+li{
+    width:78%;
+    height: max-content;
+    background-color: var(--task-background);
+    list-style-type: none;
+    padding: 2.5% 6%;
+    font-family:var(--text-font);
+    font-size: 1.1rem;
+    font-weight: 650;
+    color: var(--dark-text);
+    border-radius: 2vh;
+    margin-bottom: 4%;
+    display:flex;
+    align-items: start;
+    justify-content: space-between;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+#status_report{
+    flex-shrink: 0;
+    width:1%;
+    height:1%;
+    padding:2.15% 1.7%;
+    background-color: var(--red-button);
+    border-radius: 100%;
+    border-style: solid;
+    border-color: var(--dark-blue);
+    margin-top:1.5%;
+    margin-right:5%;
+}
+
+#change_status_box_background{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#change_status_box{
+    margin-left:36%;
+    position:fixed;
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    width:9vw;
+    height: auto;
+    padding:1%;
+    background-color: var(--delete-button-hover);
+    border-radius:2vh; 
+    box-shadow: inset;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+#change_status_box button{
+    width:100%;
+    height: auto;
+    padding:3.5% 9.5%;
+    border:none;
+    border-radius:1.5vh;
+    font-family:var(--text-font);
+    font-size: 1.1rem;
+    font-weight: 650;
+    color: var(--dark-text);
+    margin:2%;
+    cursor:pointer;
+    color:var(--white-transparent);
+}
+#not_started{
+    background-color: var(--red-button);
+}
+#not_started:hover{
+    background-color: var(--active-red-button);
+}
+#in_progress{
+    background-color: var(--light-blue);
+}
+#in_progress:hover{
+    background-color: var(--active-light-blue);
+}
+#done{
+    background-color: var(--light-green);
+}
+#done:hover{
+    background-color: var(--active-light-green);
+}
+
+#delete_button{
+    flex-shrink: 0;
+    margin-left:auto;
+    width:1.5vw;
+    height: auto;
+    padding:0.5%;
+    display:flex;
+    align-items:center;
+    border-radius:100%;
+    border:none;
+    background-color: transparent;
+}
+#delete_button:hover{
+    background-color: var(--delete-button-hover);
+    cursor:pointer;
+}
+#delete_button img{
+    width:100%;
+    height: auto;
+}
+
+
+.filters{
+    position:absolute;
+    left:23.5vw;
+    top:50vh;
+    width:10vw;
+    display: flex;
+    flex-direction: column;
+    z-index:1000;
+}
+.filters button,#delete_complited{
+    margin:2%;
+    width:100%;
+    height: auto;
+    padding:4% 10%;
+    border:none;
+    border-radius:1.5vh;
+    font-family:var(--text-font);
+    font-size: 1.25rem;
+    font-weight: 650;
+    color: var(--dark-text);
+    cursor:pointer;
+    color:var(--white-transparent);
+}
+#delete_complited{
+    width:max-content;
+    padding:1% 4%;
+    margin-left:15%;
+    font-size: 1rem;
+    background-color: var(--red-button);
+}
+#delete_complited:hover{background-color: var(--active-red-button);}
+
+#filter_all{background-color:#d3a972; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+#filter_all:hover{background-color: #eac18b;}
+#filter_notstarted{background-color: var(--red-button); box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+#filter_notstarted:hover{background-color: var(--active-red-button);}
+#filter_inprogress{background-color: var(--light-blue); box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+#filter_inprogress:hover{background-color: var(--active-light-blue);}
+#filter_done{background-color: var(--light-green); box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+#filter_done:hover{background-color: var(--active-light-green);}

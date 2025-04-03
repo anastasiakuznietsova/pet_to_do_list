@@ -1,1 +1,24 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+:root{
+    /*Colors*/
+    --background:#EAEBE3;
+    --dark-text:#354A48;
+    --light-green:#9DC880;
+    --active-light-green: #a7d488;
+    --input-text-placeholder:#CECBB7;
+    --input-text: #717064;
+    --input-background:#E8E6DA;
+    --red-button: #A82B49;
+    --active-red-button:#c02f51;
+    --list-background:#547E72;
+    --task-background: #CDDECB;
+    --delete-button-hover: #ebf2e6;
+    --light-blue: #90B6BF;
+    --active-light-blue: #9cc6d0;
+    --dark-blue: #2F7C8E;
+    --white-transparent:rgba(255, 255, 248, 0.815);
+    /*Fonts*/
+    --header-font: "Bree Serif", serif;
+    --text-font: "Open Sans", sans-serif;
+}

@@ -1,0 +1,35 @@
+<app-task-input (add_task_listener)="addTask($event)"/>
+<div class="filters">
+    <button id="filter_all"(click)="displayAll()">All</button>
+    <button id="filter_notstarted" (click)="filterTasks('Not started')">Not started</button>
+    <button id="filter_inprogress" (click)="filterTasks('In progress')">In progress</button>
+    <button id="filter_done" (click)="filterTasks('Done')">Done</button>
+</div>
+<div class="list_body">
+    <div class="title_delete">
+        <h3>To do</h3> 
+        <div *ngIf="task_list_array().length >0">
+            <button id="delete_complited" (click)="deleteDoneTasks()">Delete completed</button>
+        </div>
+    </div>
+    <div *ngIf="task_list_array().length > 0 ; else elseBlock">
+        <ul>
+            <li *ngFor="let task of task_list_array()">
+                <div id="status_report" [ngStyle]="{'background-color': getStatusColor(task.task_status)}" (click)="openStatusBox(task.id)"></div>
+                {{task.task_text}}
+                <button id="delete_button" (click)="deleteTask(task.id)"><img src="assets/delete.png" alt="delete"/></button>
+            </li>
+        </ul>
+    </div>
+    <ng-template #elseBlock>
+        <p class="fallback">Add some tasks!</p>
+    </ng-template>
+</div>
+
+<div *ngIf="isStatusBox()" id="change_status_box_background" (click)="closeStatusBox()">
+    <div id="change_status_box">
+        <button id="not_started" (click)="changeStatus('Not started')">Not started</button>
+        <button id="in_progress" (click)="changeStatus('In progress')">In progress</button>
+        <button id="done" (click)="changeStatus('Done')">Done</button>
+    </div>
+</div>

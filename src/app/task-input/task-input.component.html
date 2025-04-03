@@ -1,0 +1,4 @@
+<div class="input_container">
+    <input type="text" id="task_input" placeholder="Drink a glass of water..." required [(ngModel)]="new_task" (keyup.enter)="addTask()"/>
+    <button type="submit" id="add_task" (click)="addTask()"><b>+</b></button>
+</div>
