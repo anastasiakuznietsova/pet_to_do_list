@@ -34,5 +34,5 @@ jobs:
         with:
           folder: dist/to-do-list  
           token: ${{ secrets.GITHUB_TOKEN }}
+          branch: master
           clean: true
-          force: true
