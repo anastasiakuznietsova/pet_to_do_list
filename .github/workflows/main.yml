@@ -30,7 +30,7 @@ jobs:
         run: git worktree prune
         
       - name: Deploy to GitHub Pages
-        uses: JamesIves/github-pages-deploy-action@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/to-do-list  
           token: ${{ secrets.GITHUB_TOKEN }}
