@@ -33,5 +33,6 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: dist/to-do-list  
+          token: ${{ secrets.GITHUB_TOKEN }}
           clean: true
           force: true
